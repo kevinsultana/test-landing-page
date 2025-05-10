@@ -107,11 +107,7 @@ export default function Currency() {
           </div>
         </div>
 
-        <button
-          disabled={result}
-          onClick={handleSubmitConvert}
-          className={style.button}
-        >
+        <button onClick={handleSubmitConvert} className={style.button}>
           Convert
         </button>
 
