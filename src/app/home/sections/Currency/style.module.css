@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background-color: lightgray;
+  padding: 20px 0px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: #f4f4f4;
+}
+
+.card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.field label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.field input,
+.field select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 16px;
+  background-color: #0070f3;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #005bb5;
+}
+
+.result {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 20px;
+  color: green;
+  font-weight: bold;
+}

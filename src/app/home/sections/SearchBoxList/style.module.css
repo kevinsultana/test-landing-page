@@ -1,0 +1,106 @@
+.wrapper {
+  padding: 40px 260px;
+}
+
+.wrapper h1 {
+  text-align: center;
+  color: #006200;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.wrapper h2 {
+  text-align: center;
+  color: black;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  padding: 12px 20px;
+  margin: 0px 60px;
+  border-radius: 30px;
+  margin-top: 20px;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.labelIcon {
+  margin-right: 6px;
+}
+
+.select {
+  padding: 10px;
+  width: 200px;
+  border-radius: 10px;
+  border: 1px solid #555;
+  font-size: 14px;
+  background-color: white;
+  /* appearance: none; */
+}
+
+.button {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  padding: 12px 36px;
+  border-radius: 30px;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+  margin-top: 20px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.cardContent p {
+  font-size: 14px;
+  color: #555;
+}
+
+.cardContent h4 {
+  font-size: 24px;
+}
+
+.cardContent h5 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #006200;
+}
+
+.buttonContainer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding: 0px 30px;
+}
+
+.buttonContainer p {
+  padding: 0px 30px;
+  border-radius: 20px;
+  font-size: 28px;
+}

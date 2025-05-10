@@ -1,0 +1,46 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 150px;
+}
+
+.image {
+  /* width: 40%; */
+}
+
+.navmenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.menu li {
+  font-size: 16px;
+  padding: 10px;
+}
+
+.menuuser {
+  display: flex;
+  gap: 20px;
+}
+
+.menuuser li {
+  font-size: 16px;
+  padding: 10px 20px;
+  color: #009900;
+  font-weight: bold;
+}
+
+.menuuser li:nth-child(2) {
+  background-color: #009900;
+  color: #fff;
+  border-radius: 25px;
+}
