@@ -9,6 +9,12 @@ import AboutUs from "./sections/AboutUs/AboutUs";
 import Footer from "@/components/Footer/Footer";
 import Currency from "./sections/Currency/Currency";
 import style from "./style.module.css";
+import dynamic from "next/dynamic";
+
+const Testimonial = dynamic(
+  () => import("./sections/Testimonial/Testimonial"),
+  { ssr: false }
+);
 
 export default function Home() {
   return (
