@@ -1,30 +1,30 @@
 .background {
   background-color: #029900;
-  height: 600px;
   z-index: 2;
   position: relative;
+  margin-top: 20px;
+  padding: 4px;
+  padding-bottom: 20px;
 }
 
 .bulletWrapper {
-  /* padding: 40px 150px; */
   z-index: 1;
   position: absolute;
-  bottom: 30px;
-  left: 40px;
+  bottom: -10px;
+  left: 6px;
 }
 
 .bulletWrapper1 {
-  /* padding: 40px 150px; */
   z-index: 1;
   position: absolute;
   top: 30px;
-  right: 40px;
+  right: 5px;
 }
 
 .bulletContainer {
   display: flex;
   flex-direction: row;
-  gap: 80px;
+  gap: 30px;
 }
 
 .bulletContainer1 {
@@ -34,34 +34,35 @@
 }
 
 .bullet {
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   background-color: #ffffff;
   border-radius: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .bullet1 {
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   background-color: #ffffff;
   border-radius: 50px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .headerText {
   z-index: 3;
   position: relative;
   color: #ffffff;
-  font-size: 40px;
+  font-size: 24px;
   font-weight: bold;
   text-align: center;
-  padding: 40px 0px;
+  padding: 32px 0px;
 }
 
 .whyUsContainer {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  flex-direction: column;
   gap: 20px;
   align-items: center;
   justify-content: center;
@@ -69,33 +70,144 @@
 
 .whyUsCard {
   background-color: white;
-  width: 280px;
-  height: 360px;
+  width: 90%;
+  max-width: 320px;
+  height: auto;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
   z-index: 10;
 }
 
 .whyUsImage {
-  margin-top: 20px;
-  width: 100px;
-  height: 50px;
+  margin-top: 10px;
+  width: 80px;
+  height: 40px;
   object-fit: contain;
 }
 
 .whyUsCard h1 {
-  font-size: 20px;
-  font-weight: normal;
-  margin-top: 20px;
+  font-size: 16px;
+  margin-top: 16px;
   text-align: center;
-  width: 80%;
+  width: 90%;
 }
 
 .whyUsCard p {
-  font-size: 14px;
-  margin-top: 20px;
+  font-size: 13px;
+  margin-top: 10px;
   text-align: justify;
-  width: 90%;
+  width: 95%;
+}
+
+@media (min-width: 600px) {
+  .whyUsContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .whyUsCard {
+    width: 45%;
+    max-width: 360px;
+    height: auto;
+  }
+
+  .headerText {
+    font-size: 28px;
+  }
+
+  .bulletWrapper {
+    left: 24px;
+    bottom: 20px;
+  }
+
+  .bulletWrapper1 {
+    top: 20px;
+    right: 24px;
+  }
+
+  .bullet,
+  .bullet1 {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .whyUsContainer {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  .whyUsCard {
+    width: 280px;
+    height: 360px;
+  }
+
+  .headerText {
+    font-size: 36px;
+    padding: 40px 0px;
+  }
+
+  .bulletWrapper {
+    bottom: 30px;
+    left: 40px;
+  }
+
+  .bulletWrapper1 {
+    top: 30px;
+    right: 40px;
+  }
+
+  .bullet {
+    margin-bottom: 30px;
+  }
+
+  .bullet1 {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .headerText {
+    font-size: 42px;
+  }
+
+  .whyUsCard {
+    width: 300px;
+    height: 380px;
+  }
+
+  .whyUsImage {
+    width: 100px;
+    height: 50px;
+  }
+
+  .whyUsCard h1 {
+    font-size: 20px;
+  }
+
+  .whyUsCard p {
+    font-size: 15px;
+  }
+
+  .bulletWrapper {
+    bottom: 40px;
+    left: 60px;
+  }
+
+  .bulletWrapper1 {
+    top: 40px;
+    right: 60px;
+  }
+
+  .bullet,
+  .bullet1 {
+    width: 14px;
+    height: 14px;
+  }
 }

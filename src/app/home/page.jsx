@@ -8,19 +8,24 @@ import Testimonial from "./sections/Testimonial/Testimonial";
 import AboutUs from "./sections/AboutUs/AboutUs";
 import Footer from "@/components/Footer/Footer";
 import Currency from "./sections/Currency/Currency";
+import style from "./style.module.css";
 
 export default function Home() {
   return (
     <div>
-      <NavBar />
-      <HeroSection />
-      <AirlineLogo />
-      <MainSection />
-      <SearchboxList />
-      <Currency />
+      <div className={style.container}>
+        <NavBar />
+        <HeroSection />
+        <AirlineLogo />
+        <MainSection />
+        <SearchboxList />
+        <Currency />
+      </div>
       <WhyUs />
-      <Testimonial />
-      <AboutUs />
+      <div className={style.container}>
+        <Testimonial />
+        <AboutUs />
+      </div>
       <Footer />
     </div>
   );

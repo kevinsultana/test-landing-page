@@ -86,11 +86,9 @@ export default function Currency() {
             </select>
           </div>
 
-          <div className={style.field}>
-            <button onClick={handleSwitch} className={style.button}>
-              Switch
-            </button>
-          </div>
+          <button onClick={handleSwitch} className={style.button}>
+            Switch
+          </button>
 
           <div className={style.field}>
             <label>To</label>
@@ -107,9 +105,11 @@ export default function Currency() {
           </div>
         </div>
 
-        <button onClick={handleSubmitConvert} className={style.button}>
-          Convert
-        </button>
+        <div className={style.buttonConvertWrapper}>
+          <button onClick={handleSubmitConvert} className={style.buttonConvert}>
+            Convert
+          </button>
+        </div>
 
         <div className={style.result}>
           Result: {toCurrency} {resultAmount ?? 0}

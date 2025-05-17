@@ -2,7 +2,7 @@ import style from "./style.module.css";
 import HeroImg from "../../../../assets/heroimg.png";
 import Image from "next/image";
 import ActionButton from "@/components/ActionButton/ActionButton";
-import { FaUser, FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function HeroSection() {
   return (
@@ -17,15 +17,13 @@ export default function HeroSection() {
             Dipersiapkan dengan Baik, Dilayani dengan Cinta Perjalanan Umrah
             yang Tidak Terlupakan
           </h2>
-          <ActionButton>
-            <div className={style.button}>
-              <FaWhatsapp className={style.buttonIcon} />
-              <p className={style.buttonText}>Daftar Sekarang</p>
-            </div>
-          </ActionButton>
+          <button className={style.button}>
+            <FaWhatsapp className={style.buttonIcon} />
+            <span className={style.buttonText}>Daftar Sekarang</span>
+          </button>
         </div>
         <div className={style.heroImg}>
-          <Image src={HeroImg} height={460} alt="heroimage" />
+          <Image src={HeroImg} alt="heroimage" />
         </div>
       </div>
     </div>

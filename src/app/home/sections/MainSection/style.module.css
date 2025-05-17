@@ -1,53 +1,73 @@
 .wrapper {
-  padding: 25px 150px;
-  flex-direction: row;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 20px;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  width: 50%;
   gap: 20px;
+  text-align: center;
 }
 
 .content h1 {
-  font-size: 40px;
+  font-size: 24px;
   font-weight: bold;
   color: #016e01;
 }
 
 .content h2 {
-  font-size: 24px;
+  font-size: 16px;
   color: #191919;
 }
 
 .buttonContainer {
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
 }
 
 .buttonCek {
   padding: 10px 20px;
-  color: black;
-  font-size: 20px;
+  font-size: 16px;
+  border: 1px solid #016e01;
+  border-radius: 20px;
+  background: white;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.buttonCek:hover {
+  background: #016e01;
+  color: white;
 }
 
 .buttonContact {
   color: white;
-  font-size: 20px;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.buttonContact:hover {
+  font-size: 16.5px;
 }
 
 .imageContainer {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   gap: 20px;
 }
 
 .card {
   position: relative;
-  width: 250px;
-  height: 400px;
+  width: 100%;
+  width: 300px;
+  height: 250px;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -55,7 +75,6 @@
 .cardImage {
   object-fit: cover;
   border-radius: 20px;
-  z-index: 1;
 }
 
 .overlay {
@@ -64,29 +83,119 @@
   left: 0;
   right: 0;
   height: 100%;
-  z-index: 2;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  z-index: 1;
 }
 
 .textContainer {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 10px;
+  left: 10px;
   color: white;
-  z-index: 3;
+  z-index: 2;
 }
 
 .textContainer h1 {
-  font-size: 26px;
+  font-size: 18px;
   margin: 0;
 }
 
 .textContainer h2 {
-  font-size: 20px;
+  font-size: 14px;
   margin: 5px 0;
 }
 
 .link {
-  font-size: 20px;
+  margin-top: 150px;
+  font-size: 14px;
+  font-weight: bold;
   color: white;
-  margin-top: 260px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .content {
+    flex: 1 1 100%;
+    max-width: 600px;
+    text-align: left;
+  }
+
+  .imageContainer {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+  }
+
+  .card {
+    width: 280px;
+    height: 250px;
+    flex: 0 1 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px;
+    gap: 60px;
+    flex-wrap: nowrap;
+  }
+
+  .content {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+  }
+
+  .imageContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 100%;
+  }
+
+  .card {
+    flex: 0 0 auto;
+    width: 240px;
+    height: 250px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .wrapper {
+    gap: 120px;
+  }
+
+  .content {
+    max-width: 600px;
+  }
+
+  .imageContainer {
+    gap: 40px;
+  }
+
+  .card {
+    width: 220px;
+    height: 260px;
+  }
 }

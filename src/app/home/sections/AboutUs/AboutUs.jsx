@@ -23,7 +23,12 @@ export default function AboutUs() {
         </h2>
         <div className={style.logos}>
           {data.map((item, index) => (
-            <Image key={index} src={item} alt="aboutus1" />
+            <Image
+              key={index}
+              src={item}
+              alt="aboutus1"
+              className={style.logo}
+            />
           ))}
         </div>
       </div>

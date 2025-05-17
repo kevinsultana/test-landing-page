@@ -1,25 +1,47 @@
 .container {
+  width: 100%;
   background: linear-gradient(to right, white, lawngreen, lawngreen, white);
+  /* background-color: #f5f5f5; */
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .content {
+  width: 100%;
+  max-width: 1440px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 28px 155px;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .contentLeft {
-  width: 40%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.contentLeft img {
+  width: 120px;
+  height: auto;
+}
+
+.contentLeft h1 {
+  font-size: 14px;
+  color: #191919;
+  font-weight: 400;
+  max-width: 300px;
 }
 
 .contentRight {
   display: flex;
-  flex-direction: row;
-  gap: 30px;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
 }
 
 .item {
@@ -29,17 +51,108 @@
 }
 
 .item h2 {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: bold;
+  color: #016e01;
 }
 
 .item p {
-  font-size: 17px;
+  font-size: 14px;
+  color: #333;
+  margin: 0;
 }
 
 .social {
   display: flex;
-  gap: 10px;
-  flex-direction: row;
-  font-size: 24px;
+  gap: 15px;
+  font-size: 20px;
+  justify-content: center;
+  color: #016e01;
+}
+
+.social svg {
+  transition: transform 0.2s ease-in-out;
+}
+
+.social svg:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .contentLeft img {
+    width: 140px;
+  }
+
+  .contentLeft h1 {
+    font-size: 16px;
+    max-width: 400px;
+  }
+
+  .item h2 {
+    font-size: 18px;
+  }
+
+  .item p {
+    font-size: 15px;
+  }
+
+  .social {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 40px;
+  }
+
+  .contentLeft {
+    align-items: flex-start;
+    text-align: left;
+    gap: 15px;
+    max-width: 40%;
+  }
+
+  .contentRight {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 60px;
+    max-width: 60%;
+  }
+
+  .item {
+    min-width: 160px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    padding: 50px 80px;
+  }
+
+  .contentLeft img {
+    width: 160px;
+  }
+
+  .contentLeft h1 {
+    font-size: 18px;
+  }
+
+  .item h2 {
+    font-size: 20px;
+  }
+
+  .item p {
+    font-size: 16px;
+  }
+
+  .social {
+    font-size: 24px;
+    gap: 20px;
+  }
 }

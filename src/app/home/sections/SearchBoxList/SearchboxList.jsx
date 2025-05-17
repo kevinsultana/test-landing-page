@@ -6,7 +6,6 @@ import {
   FaMoneyBillAlt,
   FaPlaneDeparture,
 } from "react-icons/fa";
-import Select from "react-select";
 import React, { useState } from "react";
 import imageUmroh from "../../../../assets/imgUmroh.png";
 import Image from "next/image";
@@ -145,7 +144,6 @@ export default function SearchboxList() {
               <Image src={item.image} alt="image" />
             </div>
             <div className={style.cardContent}>
-              <div style={{ height: "10px" }} />
               <p>{item.tanggal}</p>
               <h4>{item.title}</h4>
               <h4>{item.subTitle}</h4>

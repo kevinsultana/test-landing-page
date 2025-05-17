@@ -1,33 +1,22 @@
 .container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  background-color: lightgray;
-  padding: 20px 0px;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
   background-color: #f4f4f4;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 30px;
 }
 
 .card {
   background: #fff;
-  padding: 32px;
+  padding: 20px;
   border-radius: 10px;
-  width: 100%;
-  max-width: 600px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .title {
   text-align: center;
-  font-size: 32px;
+  font-size: 22px;
   margin-bottom: 24px;
   font-weight: 600;
 }
@@ -41,6 +30,7 @@
 .field label {
   margin-bottom: 8px;
   font-weight: bold;
+  font-size: 14px;
 }
 
 .field input,
@@ -48,33 +38,158 @@
   padding: 8px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  font-size: 12px;
 }
 
 .row {
   display: flex;
-  gap: 16px;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .button {
   width: 100%;
-  padding: 12px;
-  margin-top: 16px;
+  padding: 8px;
+  margin-top: 8px;
   background-color: #0070f3;
   color: white;
   font-weight: bold;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 14px;
+}
+
+.buttonConvertWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonConvert {
+  width: 80%;
+  padding: 8px;
+  background-color: #0070f3;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .button:hover {
   background-color: #005bb5;
 }
 
+.buttonConvert:hover {
+  background-color: #005bb5;
+}
+
 .result {
   text-align: center;
-  margin-top: 24px;
-  font-size: 20px;
+  margin-top: 20px;
+  font-size: 18px;
   color: green;
   font-weight: bold;
+}
+
+@media (min-width: 600px) {
+  .row {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .field {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  .button {
+    width: auto;
+    padding: 10px 16px;
+    font-size: 15px;
+  }
+
+  .buttonConvert {
+    width: 60%;
+    margin-top: 30px;
+    font-size: 15px;
+  }
+
+  .field label {
+    font-size: 15px;
+  }
+
+  .field input,
+  .field select {
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .result {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 40px;
+  }
+  .card {
+    max-width: 720px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .button {
+    font-size: 16px;
+  }
+
+  .field label {
+    font-size: 16px;
+  }
+
+  .field input,
+  .field select {
+    font-size: 15px;
+  }
+
+  .result {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .card {
+    max-width: 800px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .button {
+    font-size: 18px;
+    padding: 12px 20px;
+  }
+
+  .field label {
+    font-size: 18px;
+  }
+
+  .field input,
+  .field select {
+    font-size: 16px;
+  }
+
+  .result {
+    font-size: 24px;
+  }
 }
