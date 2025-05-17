@@ -1,27 +1,26 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function useScreenSize() {
-  const [width, setWidth] = useState(window.innerWidth);
-  const [height, setHeight] = useState(window.innerHeight);
+  const [screenSize, setScreenSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
 
-  const tabletSize = 768;
-  const mobileSize = 400;
-  const mediumSize = 1200;
   useEffect(() => {
-    const handleResize = () => {
-      setHeight(window.innerHeight);
-      setWidth(window.innerWidth);
-    };
+    function handleResize() {
+      setScreenSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+
+    // Jalankan sekali saat mount, di client pasti ada window
+    handleResize();
+
     window.addEventListener("resize", handleResize);
+
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return {
-    isTabletSize: width <= tabletSize,
-    isMobileSize: width <= mobileSize,
-    isMediumSize: width <= mediumSize,
-    width,
-    height,
-  };
+  return screenSize;
 }

@@ -1,20 +1,16 @@
+"use client";
+
 import NavBar from "@/components/Navbar/NavBar";
 import HeroSection from "./sections/HeroSection/HeroSection";
 import AirlineLogo from "./sections/AirlineLogo/AirlineLogo";
 import MainSection from "./sections/MainSection/MainSection";
 import SearchboxList from "./sections/SearchBoxList/SearchboxList";
 import WhyUs from "./sections/WhyUs/WhyUs";
-// import Testimonial from "./sections/Testimonial/Testimonial";
 import AboutUs from "./sections/AboutUs/AboutUs";
 import Footer from "@/components/Footer/Footer";
 import Currency from "./sections/Currency/Currency";
 import style from "./style.module.css";
-import dynamic from "next/dynamic";
-
-const Testimonial = dynamic(
-  () => import("./sections/Testimonial/Testimonial"),
-  { ssr: false }
-);
+import TestimonialClientWrapper from "./sections/Testimonial/TestimonialClientWrapper";
 
 export default function Home() {
   return (
@@ -29,7 +25,7 @@ export default function Home() {
       </div>
       <WhyUs />
       <div className={style.container}>
-        <Testimonial />
+        <TestimonialClientWrapper />
         <AboutUs />
       </div>
       <Footer />

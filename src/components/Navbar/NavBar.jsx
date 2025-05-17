@@ -7,7 +7,6 @@ import { FaBars } from "react-icons/fa";
 
 export default function NavBar() {
   const { width } = useScreenSize();
-  console.log(width);
   return (
     <div className={Styles.navbar}>
       <div className={Styles.image}>
