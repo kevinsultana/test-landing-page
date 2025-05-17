@@ -4,7 +4,7 @@ import AirlineLogo from "./sections/AirlineLogo/AirlineLogo";
 import MainSection from "./sections/MainSection/MainSection";
 import SearchboxList from "./sections/SearchBoxList/SearchboxList";
 import WhyUs from "./sections/WhyUs/WhyUs";
-import Testimonial from "./sections/Testimonial/Testimonial";
+// import Testimonial from "./sections/Testimonial/Testimonial";
 import AboutUs from "./sections/AboutUs/AboutUs";
 import Footer from "@/components/Footer/Footer";
 import Currency from "./sections/Currency/Currency";
